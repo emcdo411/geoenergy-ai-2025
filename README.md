@@ -91,6 +91,41 @@ Understanding the entanglement of energy policy, military alliances, AI investme
 * Companies navigating global compliance risks
 * Investors predicting geopolitical volatility
 
+## 📊 [Visualizations](#visualizations)
+
+### 📈 Graph 1: Global Oil Demand Forecast
+
+```r
+library(ggplot2)
+demand <- data.frame(Year = seq(2025, 2050, 5), Demand = c(98, 101, 104, 107, 109, 110))
+ggplot(demand, aes(x = Year, y = Demand)) +
+  geom_line(color = "#556B2F", size = 1.5) +
+  theme_minimal() +
+  labs(title = "Global Oil Demand Forecast (2025-2050)", x = "Year", y = "Million Barrels per Day")
+```
+
+### 📈 Graph 2: Investment Drop due to Due Diligence Directive
+
+```r
+investment <- data.frame(Region = c("US", "EU", "China", "India"), Impact = c(-20, -10, 5, 10))
+ggplot(investment, aes(x = Region, y = Impact, fill = Impact)) +
+  geom_col() +
+  scale_fill_gradient2(low = "darkred", mid = "khaki", high = "darkgreen", midpoint = 0) +
+  theme_minimal() +
+  labs(title = "Projected Investment Shifts under Due Diligence Directive", y = "% Change")
+```
+
+### 📈 Graph 3: Strategic Oil Route Risk Map
+
+```r
+routes <- data.frame(Route = c("Strait of Hormuz", "Suez Canal", "Panama Canal"), Risk = c(0.9, 0.7, 0.4))
+ggplot(routes, aes(x = reorder(Route, Risk), y = Risk)) +
+  geom_bar(stat = "identity", fill = "#808000") +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Risk Ratings for Global Oil Routes", x = NULL, y = "Risk Level (0-1)")
+```
+
 ## 🛠 [Summary](#summary)
 
 * Oil demand is shifting, not shrinking.
@@ -103,3 +138,4 @@ Understanding the entanglement of energy policy, military alliances, AI investme
 
 **`geoenergy-ai-2025`**
 *Modeling the geopolitical and legislative feedback loops shaping the future of oil and gas.*
+
